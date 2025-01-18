@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container{
+    text-align: center;
+}
+
+.game-board{
+    width: 400px;
+    height: 400px;
+    background-color: #000000;
+    position: relative;
+    border: 2px solid #00ff00;
+    margin: 2px auto;
+    overflow: hidden;
+}
+
+.up-btn {
+    grid-area: up;
+}
+
+.down-btn {
+    grid-area: down;
+}
+
+.right-btn {
+    grid-area: right;
+}
+
+.left-btn {
+    grid-area: left;
+}
+
+.controls{
+    display: none;
+    grid-template-areas:
+    ". up ."
+    "left . right"
+    ". down ."
+    ;
+    gap: 10px;
+    justify-content: center;
+}
+
+.controls.active {
+    display: grid;
+}
+
+.btn {
+    width: 60px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+}
